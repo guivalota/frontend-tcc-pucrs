@@ -36,6 +36,8 @@
         <a routerLink="/register">Criar uma conta</a>
       </div>
     </form>
-    <p *ngIf="errorMessage">{{ errorMessage }}</p>
+    <div *ngIf="errorMessage" class="alert alert-danger mt-3">
+      {{ errorMessage }}
+    </div>
   </div>
 </div>
