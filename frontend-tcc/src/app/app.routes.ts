@@ -1,5 +1,7 @@
 import { Routes } from '@angular/router';
 import { authGuard } from './guards/auth.guard';
+import { adminGuard } from './guards/admin.guard';
+import { AccessDeniedComponent } from './pages/access-denied.component';
 
 export const routes: Routes = [
   {
@@ -28,5 +30,13 @@ export const routes: Routes = [
     loadComponent: () =>
       import('./pages/password-reset-request/password-reset-request.component')
         .then(m => m.PasswordResetRequestComponent),
-  }
+  },
+  {
+    path: 'users',
+    canActivate: [adminGuard],
+    loadComponent: () =>
+      import('./pages/user-list/user-list.component')
+        .then(m => m.UserListComponent),
+  },
+  { path: 'access-denied', component: AccessDeniedComponent },
 ];

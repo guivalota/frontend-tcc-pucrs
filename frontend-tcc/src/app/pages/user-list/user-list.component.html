@@ -1,0 +1,21 @@
+<div class="container mt-4">
+  <h2>Usuários Cadastrados</h2>
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Email</th>
+        <th>Login</th>
+        <th>Email Verificado</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users">
+        <td>{{ user.Id }}</td>
+        <td>{{ user.Email }}</td>
+        <td>{{ user.Login }}</td>
+        <td>{{ user.emailVerified ? 'Sim' : 'Não' }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
