@@ -1,32 +1,36 @@
 <div class="container d-flex justify-content-center align-items-center vh-100">
-  <div class="card p-4 shadow" style="min-width: 300px; max-width: 400px; width: 100%;">
+  <div class="container-personalizado card p-4 shadow" style="min-width: 300px; max-width: 400px; width: 100%;">
     <h6 class="text-center mb-4">CADASTRO DE USUÁRIOS</h6>
 
     <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
       <div class="mb-3">
-        <label for="email" class="form-label">Email</label>
-        <input type="email" formControlName="email" class="form-control" id="email">
+        <input type="email" formControlName="email" class="" id="email" placeholder="Email" required>
       </div>
 
       <div class="mb-3">
-        <label for="login" class="form-label">Login</label>
-        <input type="text" formControlName="login" class="form-control" id="login">
+        <input type="text" formControlName="login" class="" id="login" placeholder="Login" required>
       </div>
 
       <div class="mb-3">
-        <label for="password" class="form-label">Senha</label>
-        <input type="password" formControlName="password" class="form-control" id="password">
+        <input type="password" formControlName="password" class="" id="password" required placeholder="Senha">
       </div>
 
       <div class="mb-3">
-        <label for="confirmPassword" class="form-label">Repetir Senha</label>
-        <input type="password" formControlName="confirmPassword" class="form-control" id="confirmPassword">
+        <input type="password" formControlName="confirmPassword" class="" id="confirmPassword"
+          placeholder="Repetir a senha">
         <div *ngIf="registerForm.errors?.['passwordMismatch']" class="text-danger mt-1">
           As senhas não coincidem.
         </div>
       </div>
-
-      <button type="submit" class="btn btn-primary" [disabled]="registerForm.invalid">Registrar</button>
+      <br>
+      <div class="text-center mt-3">
+        <a routerLink="/login">VOLTAR AO LOGIN</a>
+      </div><br>
+      <div class="d-flex justify-content-center mt-4">
+        <button type="submit" class="btn btn-personalizado" [disabled]="registerForm.invalid">
+          Registrar
+        </button>
+      </div>
       <div *ngIf="successMessage" class="alert alert-success mt-3">
         {{ successMessage }}
       </div>

@@ -1,4 +1,59 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+    --background-dark: #2e2e2e; // cinza escuro
+    --text-light: #f1f1f1;
+}
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.container-personalizado {
+    background-color: #D9D9D9;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    color: #222;
+}
+
+button {
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 16px;
+    cursor: pointer;
+    
+
+    &:hover {
+        background-color: #65558F;
+    }
+}
+
+input {
+    background-color: #E6E0E9;
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 2;
+    color: #000;
+    padding: 0.5rem;
+    width: 100%;
+}
+
+.btn-personalizado {
+    width: 147px;
+    height: 56px;
+    background-color: #ECE6F0;
+    color: #65558F;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.12), /* Leve sombra para o eixo Y */
+    0px 1px 3px rgba(0, 0, 0, 0.16);
+
+    &:hover{
+        background-color: #65558F;
+        color: #ECE6F0;
+    }
+}

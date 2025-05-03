@@ -11,6 +11,7 @@ import { RouterLink } from '@angular/router';
   standalone: true,
   imports: [CommonModule, ReactiveFormsModule, RouterLink],
   templateUrl: './password-reset-request.component.html',
+  styleUrls: ['./password-reset-request.component.scss'] 
 })
 export class PasswordResetRequestComponent {
   form: FormGroup;
