@@ -1,0 +1,15 @@
+<div class="login-container">
+  <h2>Login</h2>
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <label>Login:</label>
+    <input type="text" formControlName="login" />
+
+    <label>Senha:</label>
+    <input type="password" formControlName="password" />
+
+    <button type="submit" [disabled]="loginForm.invalid">Entrar</button>
+  </form>
+  <a routerLink="/reset-password">Esqueceu a senha?</a>
+
+  <p *ngIf="errorMessage">{{ errorMessage }}</p>
+</div>
